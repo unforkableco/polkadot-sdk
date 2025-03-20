@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1742472584845,
+  "lastUpdate": 1742475091131,
   "repoUrl": "https://github.com/paritytech/polkadot-sdk",
   "entries": {
     "statement-distribution-regression-bench": [
@@ -39463,6 +39463,50 @@ window.BENCHMARK_DATA = {
           {
             "name": "statement-distribution",
             "value": 0.035209780217999996,
+            "unit": "seconds"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "egor@parity.io",
+            "name": "Egor_P",
+            "username": "EgorPopelyaev"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": false,
+          "id": "628bdd90012bdd58b894b4d0f811c7bd899c3cae",
+          "message": "[CI/CD] Refactor backports flow so that it can determine automatically where to do a backport based on labels (#7976)\n\nThis PR changes the command-backport.yml flow so that the branch names\nare not hardcoded in the pipeline file but will be parsed from the\nlabels.\nThe idea is that there are going to be a label representing each stable\nbranch:\n- A4-backport-stable2407 \n- A4-backport-stable2409 \n- A4-backport-stable2412 \n- A4-backport-stable2503\n\nIf the backport is needed to any of those branches or to all of them,\nthe corresponding label can be set on the PR and the branch name will be\nparsed from it.\nThe labels need to be created in the repo and adjusted as soon as there\nis a new release appears or an old one disappears.",
+          "timestamp": "2025-03-20T11:50:34Z",
+          "tree_id": "02f9d3601bbd2afec811696b389b8c51e4b16977",
+          "url": "https://github.com/paritytech/polkadot-sdk/commit/628bdd90012bdd58b894b4d0f811c7bd899c3cae"
+        },
+        "date": 1742475073889,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Received from peers",
+            "value": 106.39999999999996,
+            "unit": "KiB"
+          },
+          {
+            "name": "Sent to peers",
+            "value": 127.95199999999997,
+            "unit": "KiB"
+          },
+          {
+            "name": "test-environment",
+            "value": 0.045753445111999955,
+            "unit": "seconds"
+          },
+          {
+            "name": "statement-distribution",
+            "value": 0.035692439854,
             "unit": "seconds"
           }
         ]
