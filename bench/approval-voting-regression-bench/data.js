@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1742472558324,
+  "lastUpdate": 1742475066014,
   "repoUrl": "https://github.com/paritytech/polkadot-sdk",
   "entries": {
     "approval-voting-regression-bench": [
@@ -81034,6 +81034,105 @@ window.BENCHMARK_DATA = {
           {
             "name": "test-environment",
             "value": 3.3983927814121593,
+            "unit": "seconds"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "egor@parity.io",
+            "name": "Egor_P",
+            "username": "EgorPopelyaev"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": false,
+          "id": "628bdd90012bdd58b894b4d0f811c7bd899c3cae",
+          "message": "[CI/CD] Refactor backports flow so that it can determine automatically where to do a backport based on labels (#7976)\n\nThis PR changes the command-backport.yml flow so that the branch names\nare not hardcoded in the pipeline file but will be parsed from the\nlabels.\nThe idea is that there are going to be a label representing each stable\nbranch:\n- A4-backport-stable2407 \n- A4-backport-stable2409 \n- A4-backport-stable2412 \n- A4-backport-stable2503\n\nIf the backport is needed to any of those branches or to all of them,\nthe corresponding label can be set on the PR and the branch name will be\nparsed from it.\nThe labels need to be created in the repo and adjusted as soon as there\nis a new release appears or an old one disappears.",
+          "timestamp": "2025-03-20T11:50:34Z",
+          "tree_id": "02f9d3601bbd2afec811696b389b8c51e4b16977",
+          "url": "https://github.com/paritytech/polkadot-sdk/commit/628bdd90012bdd58b894b4d0f811c7bd899c3cae"
+        },
+        "date": 1742475049525,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Received from peers",
+            "value": 52936.09999999999,
+            "unit": "KiB"
+          },
+          {
+            "name": "Sent to peers",
+            "value": 63624.520000000004,
+            "unit": "KiB"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-2",
+            "value": 2.4165028150500008,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-3",
+            "value": 2.3678288982899995,
+            "unit": "seconds"
+          },
+          {
+            "name": "test-environment",
+            "value": 3.4019041733921824,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-distribution",
+            "value": 0.00001859267,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-db",
+            "value": 1.8745952378999973,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-subsystem",
+            "value": 0.4875986044699855,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-1",
+            "value": 2.3591922543100017,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting",
+            "value": 0.00002056728,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-0",
+            "value": 2.3669469596800012,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-gather-signatures",
+            "value": 0.0058256514500000045,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-distribution/test-environment",
+            "value": 0.00001859267,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting/test-environment",
+            "value": 0.00002056728,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel",
+            "value": 11.878490421149987,
             "unit": "seconds"
           }
         ]
